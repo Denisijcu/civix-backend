@@ -10,7 +10,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Civix API", version="0.2.0")
 
 # CORS
-origins = ["http://localhost:4200", "http://127.0.0.1:4200"]
+origins = ["https://vertex-civix.netlify.app/", "http://127.0.0.1:4200"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
