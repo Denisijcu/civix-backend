@@ -1,0 +1,29 @@
+services:
+  api:
+    build: .
+    container_name: civix_api
+    ports:
+      - "8002:8002"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:16-alpine
+    container_name: civix_db
+    environment:
+      POSTGRES_USER: civix_user
+      POSTGRES_PASSWORD: civix_pass
+      POSTGRES_DB: civix_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_data:

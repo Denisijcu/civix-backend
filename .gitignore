@@ -1,0 +1,31 @@
+# --- Python Backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+.env
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# --- Angular Frontend ---
+node_modules/
+dist/
+.angular/
+.output/
+npm-debug.log*
+
+# --- Environment & Secrets ---
+.env
+.env.local
+.env.*.local
+*.pem
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
